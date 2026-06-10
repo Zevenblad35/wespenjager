@@ -1,0 +1,211 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Wespennest verwijderen",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Wespenjager.nl - Koster Bestrijdingstechniek",
+    "telephone": "+31683392065",
+    "url": "https://wespenjager.nl"
+  },
+  "areaServed": "Twente, Overijssel",
+  "description": "Professioneel wespennest verwijderen door erkend bestrijdingstechnicus Joost van Koster Bestrijdingstechniek. Veilig, snel en gecertificeerd.",
+  "serviceType": "Wespenbestrijding"
+};
+---
+
+<Base
+  title="Wespennest verwijderen | Professioneel & Snel | Wespenjager.nl"
+  description="Wespennest laten verwijderen door erkend bestrijdingstechnicus Joost. Werkzaam in heel Twente en Overijssel. Dezelfde dag service mogelijk. Bel 06 83392065."
+  schema={schema}
+  canonical="https://wespenjager.nl/wespennest-verwijderen"
+>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Professionele wespenbestrijding</span>
+    <h1>Wespennest <span class="text-yellow">verwijderen</span></h1>
+    <p class="lead">Joost verwijdert uw wespennest veilig en vakkundig. Met de juiste bescherming en gecertificeerde middelen — snel en zonder risico voor u en uw gezin.</p>
+    <a href="tel:+31683392065" class="btn btn-primary" style="margin-top: 24px;">📞 Bel direct: 06 83392065</a>
+  </div>
+</section>
+<div class="wasp-stripe"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="content-split">
+      <div class="content-main">
+        <h2>Waarom een wespennest niet zelf verwijderen?</h2>
+        <p>Wespen verdedigen hun nest agressief. Als u een nest aanraakt of beschadigt, reageren honderden wespen tegelijk — met mogelijk gevaarlijke steekwonden tot gevolg. Zeker voor kinderen, ouderen of mensen met een wespenallergie is dit een serieus risico.</p>
+        <p>Joost werkt met een professioneel imkerpak, beschermende handschoenen en gecertificeerde bestrijdingsmiddelen. Hij weet hoe wespen reageren en handelt veilig en doeltreffend.</p>
+
+        <h2 style="margin-top: 40px;">Hoe verwijdert Joost een wespennest?</h2>
+        <ol class="steps-list">
+          <li><strong>Inspectie</strong> — Joost beoordeelt het nest, de toegangswegen en de ernst van de overlast.</li>
+          <li><strong>Behandeling</strong> — Met een professioneel spuitmiddel worden de wespen effectief bestreden. Afhankelijk van de situatie wordt het nest direct verwijderd of een paar dagen na behandeling.</li>
+          <li><strong>Nazorg</strong> — Joost geeft advies hoe u herhaling voorkomt en wanneer het nest veilig is om te verwijderen.</li>
+        </ol>
+
+        <h2 style="margin-top: 40px;">Waar zitten wespennesten?</h2>
+        <p>Wespennesten worden gevonden op tal van plekken:</p>
+        <ul class="bullet-list">
+          <li>In de dakgoot of dakrand</li>
+          <li>Achter gevelbeplating of in spouwmuren</li>
+          <li>In de schuur, garage of tuinhuis</li>
+          <li>In de grond (aardhoornaars)</li>
+          <li>In bomen of struiken</li>
+          <li>In ventilatieopeningen of plafondruimtes</li>
+        </ul>
+
+        <div class="info-block">
+          <strong>💡 Wist u dat?</strong> Een wespennest begint klein in het voorjaar maar kan in de zomer uitgroeien tot 3.000–8.000 wespen. Hoe eerder u ingrijpt, hoe gemakkelijker de behandeling.
+        </div>
+      </div>
+      <div class="content-aside">
+        <div class="aside-card">
+          <img src="/images/joost-pak-portret.jpg" alt="Joost klaar voor wespenbestrijding" />
+          <div class="aside-card-body">
+            <h3>Direct bellen?</h3>
+            <p>Joost staat klaar om u te helpen — ook in het weekend.</p>
+            <a href="tel:+31683392065" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">📞 06 83392065</a>
+            <a href="mailto:helpmij@wespenjager.nl" class="btn btn-blue" style="width: 100%; text-align: center; justify-content: center; margin-top: 8px;">✉ Stuur een mail</a>
+            <ul class="aside-facts">
+              <li>⚡ Dezelfde dag service</li>
+              <li>🛡️ Gecertificeerde middelen</li>
+              <li>✅ Ook zaterdag beschikbaar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="aside-regions">
+          <h4>Werkgebied</h4>
+          <p>Joost werkt in heel Twente en Overijssel:</p>
+          <div class="region-tags">
+            {['Enschede', 'Hengelo', 'Almelo', 'Deventer', 'Zwolle', 'Oldenzaal', 'Borne', 'Rijssen', 'Nijverdal', 'Hellendoorn', 'Wierden'].map(c => (
+              <a href={`/wespennest-verwijderen-${c.toLowerCase()}`} class="region-tag">{c}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGES GALLERY -->
+<section class="section section-grey section-sm">
+  <div class="container">
+    <h2 class="text-center">Joost in actie</h2>
+    <div class="gallery" style="margin-top: 32px;">
+      <img src="/images/joost-behandeling.jpg" alt="Joost behandelt wespennest in metselwerk" class="gallery-img" />
+      <img src="/images/joost-pak-aan.jpg" alt="Joost trekt beschermend pak aan" class="gallery-img" />
+      <img src="/images/joost-buiten.jpg" alt="Joost inspecteert gebouw buitenkant" class="gallery-img" />
+      <img src="/images/joost-val.jpg" alt="Wespenval van Joost Koster" class="gallery-img" />
+    </div>
+  </div>
+</section>
+
+<section class="section section-yellow text-center">
+  <div class="container">
+    <h2>Klaar om dat wespennest aan te pakken?</h2>
+    <p style="font-size: 1.1rem; margin: 16px 0 28px;">Bel Joost en hij is er snel bij. Geen gedoe, gewoon resultaat.</p>
+    <a href="tel:+31683392065" class="btn" style="background: var(--black); color: var(--white); font-size: 1.1rem; padding: 18px 36px;">📞 06 83392065</a>
+  </div>
+</section>
+
+</Base>
+
+<style>
+  .page-hero {
+    background: var(--black);
+    color: var(--white);
+    padding: 80px 0 60px;
+  }
+  .page-hero .eyebrow { color: var(--yellow); }
+  .page-hero h1 { margin: 12px 0 16px; color: var(--white); }
+  .page-hero .lead { color: rgba(255,255,255,0.8); }
+
+  .content-split {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 56px;
+    align-items: start;
+  }
+  .content-main h2 { margin-bottom: 16px; color: var(--black); font-size: 1.5rem; }
+  .content-main p { color: #444; margin-bottom: 16px; }
+  .steps-list, .bullet-list { margin: 16px 0 16px 20px; }
+  .steps-list li, .bullet-list li { margin-bottom: 10px; color: #444; }
+
+  .info-block {
+    background: var(--yellow-light);
+    border-left: 4px solid var(--yellow);
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    margin-top: 24px;
+    font-size: 0.95rem;
+  }
+
+  .aside-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 24px;
+  }
+  .aside-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+  }
+  .aside-card-body { padding: 20px; }
+  .aside-card-body h3 { margin-bottom: 8px; }
+  .aside-card-body p { font-size: 0.9rem; color: #555; margin-bottom: 16px; }
+  .aside-facts { list-style: none; margin-top: 16px; }
+  .aside-facts li { padding: 6px 0; font-size: 0.9rem; border-bottom: 1px solid #f0f0f0; }
+
+  .aside-regions {
+    background: var(--grey);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+  }
+  .aside-regions h4 { font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-mid); margin-bottom: 8px; }
+  .aside-regions p { font-size: 0.88rem; color: #555; margin-bottom: 12px; }
+  .region-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .region-tag {
+    background: var(--white);
+    border: 1px solid #ddd;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--blue);
+    transition: all 0.15s;
+  }
+  .region-tag:hover { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .gallery-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+  }
+  .gallery-img:hover { transform: scale(1.02); }
+
+  @media (max-width: 900px) {
+    .content-split { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 500px) {
+    .gallery { grid-template-columns: 1fr; }
+  }
+</style>

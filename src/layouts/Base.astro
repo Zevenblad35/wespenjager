@@ -1,0 +1,500 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schema?: object;
+  ogImage?: string;
+}
+
+const { title, description, canonical, schema, ogImage = '/images/joost-pak-portret.jpg' } = Astro.props;
+const canonicalURL = canonical || Astro.url.href;
+---
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`https://wespenjager.nl${ogImage}`} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="nl_NL" />
+
+    <!-- Geo meta voor lokale SEO -->
+    <meta name="geo.region" content="NL-OV" />
+    <meta name="geo.placename" content="Twente, Overijssel" />
+
+    <!-- Structured Data -->
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+
+    <!-- Basis structured data: LocalBusiness -->
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Wespenjager.nl - Koster Bestrijdingstechniek",
+      "url": "https://wespenjager.nl",
+      "telephone": "+31683392065",
+      "email": "helpmij@wespenjager.nl",
+      "description": "Professionele wespenbestrijding en wespennest verwijderen in Twente, Overijssel en omgeving. Joost van Koster Bestrijdingstechniek helpt particulieren snel en veilig van wespenplaag af.",
+      "logo": "https://wespenjager.nl/images/joost-ladder.jpg",
+      "image": "https://wespenjager.nl/images/joost-pak-portret.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Overijssel",
+        "addressCountry": "NL"
+      },
+      "areaServed": [
+        "Enschede", "Hengelo", "Almelo", "Deventer", "Zwolle",
+        "Oldenzaal", "Borne", "Rijssen", "Wierden", "Hellendoorn",
+        "Nijverdal", "Twente", "Overijssel"
+      ],
+      "serviceType": "Wespenbestrijding",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      "priceRange": "€€",
+      "sameAs": []
+    })}</script>
+
+    <style is:global>
+      /* === TOKENS === */
+      :root {
+        --yellow: #F5C400;
+        --yellow-dark: #D4A900;
+        --yellow-light: #FFF0A0;
+        --black: #0D0D0D;
+        --black-soft: #1A1A1A;
+        --blue: #1A6FBF;
+        --blue-dark: #0E4A80;
+        --blue-light: #E8F2FA;
+        --white: #FFFFFF;
+        --grey: #F5F5F5;
+        --grey-mid: #888;
+        --text: #1A1A1A;
+
+        --radius: 4px;
+        --radius-lg: 8px;
+        --shadow: 0 4px 20px rgba(0,0,0,0.12);
+        --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+
+        --font-display: 'Arial Black', 'Impact', system-ui, sans-serif;
+        --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+        --max: 1200px;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--text);
+        background: var(--white);
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      img { max-width: 100%; height: auto; display: block; }
+      a { color: inherit; }
+
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* === TYPOGRAPHY === */
+      h1, h2, h3, h4 {
+        font-family: var(--font-display);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+
+      h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+      h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+      h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+
+      .eyebrow {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--yellow-dark);
+      }
+
+      .lead {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: #444;
+        max-width: 640px;
+      }
+
+      /* === BUTTONS === */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        font-family: var(--font-display);
+        font-size: 0.95rem;
+        font-weight: 900;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: var(--radius);
+        transition: all 0.18s ease;
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-primary {
+        background: var(--yellow);
+        color: var(--black);
+      }
+      .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); box-shadow: var(--shadow); }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--yellow);
+        border: 2px solid var(--yellow);
+      }
+      .btn-outline:hover { background: var(--yellow); color: var(--black); }
+
+      .btn-blue {
+        background: var(--blue);
+        color: var(--white);
+      }
+      .btn-blue:hover { background: var(--blue-dark); transform: translateY(-2px); }
+
+      /* === SECTIONS === */
+      .section { padding: 80px 0; }
+      .section-sm { padding: 48px 0; }
+
+      .section-dark {
+        background: var(--black);
+        color: var(--white);
+      }
+      .section-yellow {
+        background: var(--yellow);
+        color: var(--black);
+      }
+      .section-blue {
+        background: var(--blue);
+        color: var(--white);
+      }
+      .section-grey {
+        background: var(--grey);
+      }
+
+      /* === UTILITIES === */
+      .text-center { text-align: center; }
+      .text-yellow { color: var(--yellow); }
+      .text-blue { color: var(--blue); }
+      .text-white { color: var(--white); }
+
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+      .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+      @media (max-width: 900px) {
+        .grid-3 { grid-template-columns: 1fr 1fr; }
+        .grid-4 { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 640px) {
+        .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+        .section { padding: 56px 0; }
+      }
+
+      /* === WASP ACCENT PATTERN === */
+      .wasp-stripe {
+        background-image: repeating-linear-gradient(
+          -45deg,
+          var(--yellow) 0px,
+          var(--yellow) 10px,
+          var(--black) 10px,
+          var(--black) 20px
+        );
+        height: 6px;
+      }
+
+      /* === CARDS === */
+      .card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+      .card-body { padding: 24px; }
+
+      /* === BADGE === */
+      .badge {
+        display: inline-block;
+        background: var(--yellow);
+        color: var(--black);
+        font-family: var(--font-display);
+        font-size: 0.75rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 2px;
+      }
+
+      /* === REVIEW STARS === */
+      .stars { color: var(--yellow); font-size: 1.1rem; letter-spacing: 2px; }
+
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="nav-inner container">
+        <a href="/" class="nav-logo">
+          <span class="nav-logo-icon">🐝</span>
+          <span class="nav-logo-text">Wespenjager<span>.nl</span></span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu openen">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/#diensten">Diensten</a></li>
+          <li><a href="/#werkwijze">Werkwijze</a></li>
+          <li><a href="/wespen">Over Wespen</a></li>
+          <li><a href="/veelgestelde-vragen">FAQ</a></li>
+          <li><a href="/over-ons">Over Joost</a></li>
+          <li><a href="/#contact" class="nav-cta">Bel Direct</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- STRIPE -->
+    <div class="wasp-stripe"></div>
+
+    <!-- SLOT -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="wasp-stripe"></div>
+      <div class="footer-inner container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <span class="text-yellow">Wespenjager.nl</span>
+            </div>
+            <p>Onderdeel van<br><strong>Koster Bestrijdingstechniek</strong></p>
+            <p class="footer-tagline">Snel. Veilig. Vakkundig.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Diensten</h4>
+            <ul>
+              <li><a href="/wespennest-verwijderen">Wespennest verwijderen</a></li>
+              <li><a href="/wespenbestrijding">Wespenbestrijding</a></li>
+              <li><a href="/wespenval-plaatsen">Wespenval plaatsen</a></li>
+              <li><a href="/wespen-voorkomen">Wespen voorkomen</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Regio's</h4>
+            <ul>
+              <li><a href="/wespennest-verwijderen-enschede">Enschede</a></li>
+              <li><a href="/wespennest-verwijderen-hengelo">Hengelo</a></li>
+              <li><a href="/wespennest-verwijderen-almelo">Almelo</a></li>
+              <li><a href="/wespennest-verwijderen-deventer">Deventer</a></li>
+              <li><a href="/wespennest-verwijderen-zwolle">Zwolle</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <p><a href="tel:+31683392065">📞 06 83392065</a></p>
+            <p><a href="mailto:helpmij@wespenjager.nl">✉ helpmij@wespenjager.nl</a></p>
+            <p>Werkgebied: Twente & Overijssel</p>
+            <p>Ma-Za: 07:00 – 20:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Wespenjager.nl — Koster Bestrijdingstechniek | <a href="/privacybeleid">Privacybeleid</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile nav toggle
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      toggle?.addEventListener('click', () => links?.classList.toggle('open'));
+
+      // Sticky nav
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        nav?.classList.toggle('scrolled', window.scrollY > 60);
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  #nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--black);
+    color: var(--white);
+    transition: box-shadow 0.2s;
+  }
+  #nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    gap: 32px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--white);
+  }
+  .nav-logo-icon { font-size: 1.5rem; }
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+  .nav-logo-text span { color: var(--yellow); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    flex-wrap: nowrap;
+  }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    transition: background 0.15s;
+    white-space: nowrap;
+    color: var(--white);
+  }
+  .nav-links a:hover { background: rgba(255,255,255,0.08); }
+  .nav-links .nav-cta {
+    background: var(--yellow);
+    color: var(--black);
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .nav-links .nav-cta:hover { background: var(--yellow-dark); }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  @media (max-width: 860px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--black-soft);
+      flex-direction: column;
+      align-items: stretch;
+      padding: 16px;
+      gap: 4px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 16px; }
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--black);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+  }
+  .footer-inner { padding: 56px 0 32px; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+  .footer-tagline {
+    margin-top: 8px;
+    font-style: italic;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85rem;
+  }
+  .footer-col h4 {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 8px; }
+  .footer-col a { text-decoration: none; transition: color 0.15s; }
+  .footer-col a:hover { color: var(--yellow); }
+  .footer-col p { margin-bottom: 8px; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.5); }
+
+  @media (max-width: 860px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  @media (max-width: 500px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>

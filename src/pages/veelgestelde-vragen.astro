@@ -1,0 +1,208 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Hoe snel kan Joost komen?", "acceptedAnswer": { "@type": "Answer", "text": "In de meeste gevallen dezelfde dag nog. Bel 's ochtends vroeg voor de beste kans op zelfde-dag service in Twente en Overijssel." }},
+    { "@type": "Question", "name": "Wat kost een wespennest laten verwijderen?", "acceptedAnswer": { "@type": "Answer", "text": "De prijs hangt af van de locatie van het nest, de bereikbaarheid en de grootte. Bel voor een vrijblijvende prijsopgave op 06 83392065." }},
+    { "@type": "Question", "name": "Is wespenbestrijding gevaarlijk voor mijn gezin of huisdieren?", "acceptedAnswer": { "@type": "Answer", "text": "Joost werkt met gecertificeerde middelen die na de behandeling veilig zijn voor mensen en huisdieren. Hij legt ter plekke uit wat de aanbevolen wachttijd is." }},
+    { "@type": "Question", "name": "Kan ik een wespennest zelf verwijderen?", "acceptedAnswer": { "@type": "Answer", "text": "Dit wordt sterk afgeraden. Wespen verdedigen hun nest massaal als het wordt aangeraakt. Een steekgeval van honderden wespen tegelijk kan levensgevaarlijk zijn, zeker bij allergie." }},
+    { "@type": "Question", "name": "Wanneer is wespenseizoen?", "acceptedAnswer": { "@type": "Answer", "text": "Wespen zijn actief van mei tot oktober. De piek is in augustus–september, als nesten het grootst zijn en voedsel schaarser wordt. Wespen zijn dan het agressiefst." }},
+    { "@type": "Question", "name": "Werkt Joost ook in het weekend?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, ook op zaterdag. Neem contact op via 06 83392065 voor beschikbaarheid." }}
+  ]
+};
+---
+
+<Base
+  title="Veelgestelde vragen over wespenbestrijding | Wespenjager.nl"
+  description="Alles wat u wilt weten over wespennesten verwijderen, wespenbestrijding, kosten en hoe Joost werkt. Eerlijke antwoorden van een erkend bestrijdingstechnicus."
+  schema={schema}
+  canonical="https://wespenjager.nl/veelgestelde-vragen"
+>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Alles op een rij</span>
+    <h1>Veelgestelde <span class="text-yellow">vragen</span></h1>
+    <p class="lead">Eerlijke antwoorden van Joost — erkend bestrijdingstechnicus bij Koster Bestrijdingstechniek.</p>
+  </div>
+</section>
+<div class="wasp-stripe"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="faq-layout">
+      <aside class="faq-nav">
+        <h4>Categorieën</h4>
+        <ul>
+          <li><a href="#service">Service & afspraken</a></li>
+          <li><a href="#kosten">Kosten</a></li>
+          <li><a href="#veiligheid">Veiligheid</a></li>
+          <li><a href="#wespen">Over wespen</a></li>
+        </ul>
+        <div class="faq-cta">
+          <p>Vraag niet gevonden?</p>
+          <a href="tel:+31683392065" class="btn btn-primary" style="width:100%; justify-content:center;">📞 Bel Joost</a>
+        </div>
+      </aside>
+
+      <div class="faq-content">
+        <section id="service">
+          <h2>Service & afspraken</h2>
+          <details class="faq-item">
+            <summary>Hoe snel kan Joost komen?</summary>
+            <p>In de meeste gevallen dezelfde dag nog. Bel 's ochtends vroeg voor de beste kans op zelfde-dag service. Joost werkt in heel Twente en Overijssel vanuit een centrale locatie.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Werkt Joost ook in het weekend?</summary>
+            <p>Ja, ook op zaterdag. Neem contact op via 06 83392065 voor beschikbaarheid.</p>
+          </details>
+          <details class="faq-item">
+            <summary>In welk gebied werkt Joost?</summary>
+            <p>Joost is actief in heel Twente en Overijssel — van Enschede en Hengelo tot Deventer, Zwolle en alle omliggende gemeenten. Twijfelt u? Bel even.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Moet ik thuis zijn tijdens de behandeling?</summary>
+            <p>Voor buitennesten is dat niet altijd nodig, maar voor binnennesten of als Joost toegang nodig heeft tot uw woning is uw aanwezigheid vereist.</p>
+          </details>
+        </section>
+
+        <section id="kosten" style="margin-top: 48px;">
+          <h2>Kosten</h2>
+          <details class="faq-item">
+            <summary>Wat kost een wespennest laten verwijderen?</summary>
+            <p>De prijs hangt af van de locatie van het nest, de bereikbaarheid, het type wespen en de ernst van de overlast. Bel voor een vrijblijvende prijsopgave op 06 83392065.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Zijn er rijkosten?</summary>
+            <p>Dat hangt af van de afstand. Joost rekent eerlijk — bel voor een duidelijke prijsopgave inclusief eventuele rijkosten.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Vergoedt mijn verzekering wespenbestrijding?</summary>
+            <p>Dat verschilt per verzekeraar en polis. Sommige inboedelverzekeringen vergoeden (een deel van) de kosten. Vraag dit na bij uw verzekeraar.</p>
+          </details>
+        </section>
+
+        <section id="veiligheid" style="margin-top: 48px;">
+          <h2>Veiligheid</h2>
+          <details class="faq-item">
+            <summary>Kan ik een wespennest zelf verwijderen?</summary>
+            <p>Dit wordt sterk afgeraden. Wespen verdedigen hun nest massaal als het wordt aangeraakt of beschadigd. Honderden steken tegelijk kan levensgevaarlijk zijn — zeker bij allergie voor wespenangel. Laat dit over aan een professional.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is de behandeling veilig voor mijn kinderen en huisdieren?</summary>
+            <p>Joost werkt met gecertificeerde middelen die na de behandeling veilig zijn voor mensen en huisdieren. Hij geeft ter plekke advies over de aanbevolen wachttijd voordat u de behandelde ruimte weer betreedt.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wat als ik allergisch ben voor wespen?</summary>
+            <p>Meld dit altijd bij Joost als u belt. Bij een bekende allergie is het extra belangrijk dat u uit de buurt blijft tijdens de behandeling. Joost houdt hier rekening mee.</p>
+          </details>
+        </section>
+
+        <section id="wespen" style="margin-top: 48px;">
+          <h2>Over wespen</h2>
+          <details class="faq-item">
+            <summary>Wanneer is het wespenseizoen?</summary>
+            <p>Wespen zijn actief van mei tot oktober. De piek is in augustus–september, als nesten het grootst zijn (3.000–8.000 wespen) en voedselaanbod afneemt. Wespen zijn dan het agressiefst.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Hoe groot wordt een wespennest?</summary>
+            <p>Een nest begint in het voorjaar klein — een koningin bouwt het in haar eentje. In de zomer groeit het snel: een volwassen nest bevat 3.000–8.000 wespen. Hoe eerder u ingrijpt, hoe makkelijker de behandeling.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Komen wespen terug na bestrijding?</summary>
+            <p>Na een geslaagde behandeling is het nest dood. Wel kunnen andere wespen het jaar daarna een nieuw nest bouwen op dezelfde plek. Joost geeft advies hoe u dit kunt voorkomen.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wat is het verschil tussen een wesp en een hoornaar?</summary>
+            <p>Hoornaars zijn groter (2–3 cm) en hebben een oranje-bruin kleurpatroon. Gewone wespen zijn kleiner en feller geel-zwart. Beide kunnen agressief zijn bij nestbedreiging. Joost bestrijdt beide soorten.</p>
+          </details>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm section-yellow text-center">
+  <div class="container">
+    <h2>Vraag niet gevonden? Bel gewoon.</h2>
+    <p style="margin: 12px 0 24px;">Joost beantwoordt uw vraag snel en eerlijk.</p>
+    <a href="tel:+31683392065" class="btn" style="background: var(--black); color: var(--white); padding: 16px 32px; font-size: 1.05rem;">📞 06 83392065</a>
+  </div>
+</section>
+
+</Base>
+
+<style>
+  .page-hero {
+    background: var(--black);
+    color: var(--white);
+    padding: 72px 0 56px;
+  }
+  .page-hero .eyebrow { color: var(--yellow); }
+  .page-hero h1 { color: var(--white); margin: 12px 0 16px; }
+  .page-hero .lead { color: rgba(255,255,255,0.8); }
+
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .faq-nav {
+    position: sticky;
+    top: 80px;
+  }
+  .faq-nav h4 {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: 12px;
+  }
+  .faq-nav ul { list-style: none; margin-bottom: 32px; }
+  .faq-nav ul li { margin-bottom: 8px; }
+  .faq-nav a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--blue);
+    font-weight: 600;
+    transition: color 0.15s;
+  }
+  .faq-nav a:hover { color: var(--yellow-dark); }
+  .faq-cta p { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
+
+  .faq-content section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--yellow);
+    display: inline-block;
+  }
+  .faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 16px 0;
+  }
+  .faq-item summary {
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    font-size: 1rem;
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-item summary::after { content: '+'; color: var(--yellow-dark); font-size: 1.3rem; font-family: var(--font-display); }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { margin-top: 12px; color: #555; font-size: 0.95rem; line-height: 1.7; }
+
+  @media (max-width: 700px) {
+    .faq-layout { grid-template-columns: 1fr; }
+    .faq-nav { position: static; }
+  }
+</style>

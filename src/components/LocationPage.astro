@@ -1,0 +1,298 @@
+---
+export interface Props {
+  city: string;
+  region: string;
+  slug: string;
+  intro?: string;
+  extraFacts?: string[];
+}
+
+import Base from '../layouts/Base.astro';
+const { city, region, slug, intro, extraFacts = [] } = Astro.props;
+
+const title = `Wespennest verwijderen ${city} | Wespenjager.nl`;
+const description = `Wespennest laten verwijderen in ${city}? Joost van Wespenjager.nl (Koster Bestrijdingstechniek) is snel ter plaatse in ${city} en omgeving. Bel direct: 06 83392065.`;
+const canonical = `https://wespenjager.nl/wespennest-verwijderen-${slug}`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Wespennest verwijderen ${city}`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Wespenjager.nl - Koster Bestrijdingstechniek",
+    "telephone": "+31683392065",
+    "url": "https://wespenjager.nl"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": city,
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": region
+    }
+  },
+  "description": description
+};
+
+const nearbyFacts = extraFacts.length > 0 ? extraFacts : [
+  `Snelle service in ${city} en directe omgeving`,
+  `Gecertificeerde middelen — veilig voor gezin en huisdieren`,
+  `Dezelfde dag service in ${city} mogelijk`,
+];
+
+const nearbyRegions = ['Enschede', 'Hengelo', 'Almelo', 'Deventer', 'Zwolle', 'Oldenzaal', 'Borne', 'Rijssen', 'Nijverdal', 'Hellendoorn', 'Wierden', 'Delden']
+  .filter(c => c !== city);
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical={canonical}
+>
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a> › <a href="/wespennest-verwijderen">Wespennest verwijderen</a> › {city}
+    </nav>
+    <span class="eyebrow">{region}</span>
+    <h1>Wespennest verwijderen<br><span class="text-yellow">{city}</span></h1>
+    <p class="lead">
+      {intro || `Last van wespen in ${city}? Joost van Wespenjager.nl (Koster Bestrijdingstechniek) is snel ter plaatse en zorgt dat u veilig van uw wespennest afkomt.`}
+    </p>
+    <a href="tel:+31683392065" class="btn btn-primary cta-btn">📞 Bel direct: 06 83392065</a>
+  </div>
+</section>
+<div class="wasp-stripe"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="loc-split">
+      <div class="loc-main">
+        <h2>Wespenbestrijding in {city}</h2>
+        <p>Wespen zijn actief van mei tot oktober, en een wespennest kan in de zomer uitgroeien tot duizenden exemplaren. In {city} en omgeving ziet Joost regelmatig overlast in dakranden, schuren, spouwmuren en tuinhuisjes.</p>
+        <p>Als erkend bestrijdingstechnicus van Koster Bestrijdingstechniek helpt Joost u snel en vakkundig. Hij werkt met professionele bescherming en gecertificeerde middelen die veilig zijn voor mensen en huisdieren.</p>
+
+        <div class="facts-grid" style="margin: 32px 0;">
+          {nearbyFacts.map((f) => (
+            <div class="fact-item">
+              <span class="fact-icon">✓</span>
+              <span>{f}</span>
+            </div>
+          ))}
+        </div>
+
+        <h2>Wespennest gevonden in {city}?</h2>
+        <p>Doe dit niet:</p>
+        <ul class="warning-list">
+          <li>❌ Niet zelf het nest aanraken of verplaatsen</li>
+          <li>❌ Geen water op het nest gooien</li>
+          <li>❌ Niet met insectenspray werken — dit maakt wespen agressiever</li>
+          <li>❌ Geen zaklamp gebruiken — licht trekt wespen aan</li>
+        </ul>
+
+        <p style="margin-top: 20px;">Bel Joost direct op <a href="tel:+31683392065" style="color: var(--blue); font-weight: 700;">06 83392065</a>. Hij beoordeelt de situatie en handelt snel.</p>
+
+        <div class="info-block" style="margin-top: 32px;">
+          <strong>📍 Werkgebied rondom {city}</strong><br>
+          Joost is actief in {city} en alle omliggende dorpen en wijken. Twijfelt u of hij bij u in de buurt komt? Bel even — hij helpt u graag.
+        </div>
+      </div>
+
+      <div class="loc-aside">
+        <div class="contact-box">
+          <div class="contact-box-header">
+            <h3>Wespenprobleem in {city}?</h3>
+          </div>
+          <div class="contact-box-body">
+            <p>Bel Joost direct voor snel advies en een afspraak:</p>
+            <a href="tel:+31683392065" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1.05rem; padding: 16px;">
+              📞 06 83392065
+            </a>
+            <a href="mailto:helpmij@wespenjager.nl" class="btn btn-blue" style="width: 100%; justify-content: center; margin-top: 10px;">
+              ✉ Stuur een mail
+            </a>
+            <ul class="contact-list">
+              <li>⚡ Dezelfde dag service mogelijk</li>
+              <li>🛡️ Gecertificeerde bestrijding</li>
+              <li>📅 Ma–Za: 07:00–20:00</li>
+              <li>🚐 Mobiel door heel Twente</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="joost-img-block">
+          <img src="/images/joost-auto.jpg" alt="Joost in zijn bestelbus onderweg naar {city}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ for this location -->
+<section class="section section-grey section-sm">
+  <div class="container">
+    <h2>Veelgestelde vragen over wespenbestrijding in {city}</h2>
+    <div class="faq-grid" style="margin-top: 28px;">
+      <details class="faq-box">
+        <summary>Hoe snel is Joost in {city}?</summary>
+        <p>Joost werkt vanuit Twente en kan in de meeste gevallen dezelfde dag nog langskomen in {city}. Bel vroeg voor de beste kans op zelfde-dag service.</p>
+      </details>
+      <details class="faq-box">
+        <summary>Wat kost wespenbestrijding in {city}?</summary>
+        <p>De prijs hangt af van de locatie van het nest, de toegankelijkheid en de ernst van de overlast. Bel voor een vrijblijvende prijsopgave.</p>
+      </details>
+      <details class="faq-box">
+        <summary>Werkt Joost ook in de omgeving van {city}?</summary>
+        <p>Ja, Joost werkt in heel Twente en Overijssel. Hij is ook actief in alle dorpen en wijken rondom {city}.</p>
+      </details>
+      <details class="faq-box">
+        <summary>Is wespenbestrijding gevaarlijk voor mijn kinderen of huisdieren?</summary>
+        <p>Joost werkt met gecertificeerde middelen die na behandeling veilig zijn voor mensen en huisdieren. Hij legt ter plekke uit wat de veilige wachttijd is.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Nearby cities -->
+<section class="section section-sm">
+  <div class="container">
+    <h3 class="text-center" style="margin-bottom: 24px;">Ook actief in andere gemeenten:</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+      {nearbyRegions.map(c => (
+        <a href={`/wespennest-verwijderen-${c.toLowerCase()}`} class="loc-chip">
+          📍 {c}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section-sm section-yellow text-center">
+  <div class="container">
+    <h2>Wespennest in {city}? Bel Joost.</h2>
+    <p style="margin: 12px 0 24px;">Dezelfde dag service. Veilig. Professioneel.</p>
+    <a href="tel:+31683392065" class="btn" style="background: var(--black); color: var(--white); font-size: 1.05rem; padding: 16px 32px;">📞 06 83392065</a>
+  </div>
+</section>
+
+</Base>
+
+<style>
+  .page-hero {
+    background: var(--black);
+    color: var(--white);
+    padding: 72px 0 56px;
+  }
+  .breadcrumb {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 20px;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--yellow); }
+  .page-hero .eyebrow { color: var(--yellow); margin-bottom: 8px; }
+  .page-hero h1 { color: var(--white); margin-bottom: 16px; }
+  .page-hero .lead { color: rgba(255,255,255,0.8); max-width: 600px; }
+  .cta-btn { margin-top: 24px; }
+
+  .loc-split {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    align-items: start;
+  }
+  .loc-main h2 { margin-bottom: 16px; color: var(--black); }
+  .loc-main p { color: #444; margin-bottom: 16px; }
+
+  .facts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .fact-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--yellow-light);
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+  }
+  .fact-icon { color: var(--yellow-dark); font-weight: 900; flex-shrink: 0; }
+
+  .warning-list { list-style: none; margin: 12px 0; }
+  .warning-list li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+
+  .info-block {
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue);
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .contact-box {
+    background: var(--black);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-lg);
+  }
+  .contact-box-header {
+    background: var(--yellow);
+    padding: 16px 20px;
+  }
+  .contact-box-header h3 { color: var(--black); font-size: 1rem; }
+  .contact-box-body { padding: 20px; }
+  .contact-box-body p { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 16px; }
+  .contact-list { list-style: none; margin-top: 16px; }
+  .contact-list li { padding: 7px 0; font-size: 0.88rem; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+  .joost-img-block img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+  }
+
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .faq-box {
+    background: var(--white);
+    border: 1px solid #e5e5e5;
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+  }
+  .faq-box summary {
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    color: var(--black);
+    font-size: 0.95rem;
+  }
+  .faq-box summary::after { content: ' +'; color: var(--yellow-dark); }
+  .faq-box[open] summary::after { content: ' −'; }
+  .faq-box p { margin-top: 12px; font-size: 0.9rem; color: #555; }
+
+  .loc-chip {
+    background: var(--grey);
+    border: 1px solid #ddd;
+    color: var(--blue);
+    font-size: 0.88rem;
+    padding: 8px 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .loc-chip:hover { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+
+  @media (max-width: 800px) {
+    .loc-split { grid-template-columns: 1fr; }
+    .faq-grid { grid-template-columns: 1fr; }
+  }
+</style>
