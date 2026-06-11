@@ -1,122 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://wespenjager.nl/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespenbestrijding/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespenbestrijding/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespenval-plaatsen/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespenval-plaatsen/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespen-voorkomen/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespen-voorkomen/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespen/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespen/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/veelgestelde-vragen/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/veelgestelde-vragen/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/over-ons/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/over-ons/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Kerngebied: Hellendoorn / Nijverdal en omgeving -->
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-enschede/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-hellendoorn/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-nijverdal/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-haarle/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-hengelo/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-daarle/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-almelo/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-hulsen/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <!-- Rijssen-Holten -->
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-rijssen/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-holten/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-deventer/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-zuna/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <!-- Wierden en omgeving -->
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-wierden/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-notter/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <!-- Ommen / Raalte -->
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-ommen/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-raalte/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <!-- Overig Twente / Overijssel -->
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-enschede/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-hengelo/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-almelo/</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-deventer/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-zwolle/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-zwolle/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-oldenzaal/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-oldenzaal/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-borne/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-borne/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-rijssen/</loc>
-    <lastmod>2025-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-nijverdal/</loc>
-    <lastmod>2025-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-hellendoorn/</loc>
-    <lastmod>2025-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-wierden/</loc>
-    <lastmod>2025-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wespenjager.nl/wespennest-verwijderen-delden/</loc>
-    <lastmod>2025-06-10</lastmod>
+    <loc>https://wespenfixer.nl/wespennest-verwijderen-delden/</loc>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
