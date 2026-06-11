@@ -10,9 +10,9 @@ export interface Props {
 import Base from '../layouts/Base.astro';
 const { city, region, slug, intro, extraFacts = [] } = Astro.props;
 
-const title = `Wespennest verwijderen ${city} | Wespenjager.nl`;
-const description = `Wespennest laten verwijderen in ${city}? Joost van Wespenjager.nl (Koster Bestrijdingstechniek) is snel ter plaatse in ${city} en omgeving. Bel direct: 06 83392065.`;
-const canonical = `https://wespenjager.nl/wespennest-verwijderen-${slug}`;
+const title = `Wespennest verwijderen ${city} | Wespenfixer.nl`;
+const description = `Wespennest laten verwijderen in ${city}? Joost van Wespenfixer.nl (Koster Bestrijdingstechniek) is snel ter plaatse in ${city} en omgeving. Bel direct: 06 83392065.`;
+const canonical = `https://wespenfixer.nl/wespennest-verwijderen-${slug}`;
 
 const schema = {
   "@context": "https://schema.org",
@@ -20,9 +20,9 @@ const schema = {
   "name": `Wespennest verwijderen ${city}`,
   "provider": {
     "@type": "LocalBusiness",
-    "name": "Wespenjager.nl - Koster Bestrijdingstechniek",
+    "name": "Wespenfixer.nl - Koster Bestrijdingstechniek",
     "telephone": "+31683392065",
-    "url": "https://wespenjager.nl"
+    "url": "https://wespenfixer.nl"
   },
   "areaServed": {
     "@type": "City",
@@ -41,8 +41,12 @@ const nearbyFacts = extraFacts.length > 0 ? extraFacts : [
   `Dezelfde dag service in ${city} mogelijk`,
 ];
 
-const nearbyRegions = ['Enschede', 'Hengelo', 'Almelo', 'Deventer', 'Zwolle', 'Oldenzaal', 'Borne', 'Rijssen', 'Nijverdal', 'Hellendoorn', 'Wierden', 'Delden']
-  .filter(c => c !== city);
+const nearbyRegions = [
+  'Hellendoorn', 'Nijverdal', 'Haarle', 'Daarle', 'Hulsen',
+  'Rijssen', 'Holten', 'Zuna', 'Wierden', 'Notter',
+  'Ommen', 'Raalte', 'Enschede', 'Hengelo', 'Almelo',
+  'Deventer', 'Zwolle', 'Oldenzaal', 'Borne', 'Delden'
+].filter(c => c !== city);
 ---
 
 <Base
@@ -60,7 +64,7 @@ const nearbyRegions = ['Enschede', 'Hengelo', 'Almelo', 'Deventer', 'Zwolle', 'O
     <span class="eyebrow">{region}</span>
     <h1>Wespennest verwijderen<br><span class="text-yellow">{city}</span></h1>
     <p class="lead">
-      {intro || `Last van wespen in ${city}? Joost van Wespenjager.nl (Koster Bestrijdingstechniek) is snel ter plaatse en zorgt dat u veilig van uw wespennest afkomt.`}
+      {intro || `Last van wespen in ${city}? Joost van Wespenfixer.nl (Koster Bestrijdingstechniek) is snel ter plaatse en zorgt dat u veilig van uw wespennest afkomt.`}
     </p>
     <a href="tel:+31683392065" class="btn btn-primary cta-btn">📞 Bel direct: 06 83392065</a>
   </div>
@@ -111,7 +115,7 @@ const nearbyRegions = ['Enschede', 'Hengelo', 'Almelo', 'Deventer', 'Zwolle', 'O
             <a href="tel:+31683392065" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1.05rem; padding: 16px;">
               📞 06 83392065
             </a>
-            <a href="mailto:helpmij@wespenjager.nl" class="btn btn-blue" style="width: 100%; justify-content: center; margin-top: 10px;">
+            <a href="mailto:helpmij@wespenfixer.nl" class="btn btn-blue" style="width: 100%; justify-content: center; margin-top: 10px;">
               ✉ Stuur een mail
             </a>
             <ul class="contact-list">

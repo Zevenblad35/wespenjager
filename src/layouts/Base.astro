@@ -23,7 +23,7 @@ const canonicalURL = canonical || Astro.url.href;
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`https://wespenjager.nl${ogImage}`} />
+    <meta property="og:image" content={`https://wespenfixer.nl${ogImage}`} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="nl_NL" />
@@ -39,22 +39,24 @@ const canonicalURL = canonical || Astro.url.href;
     <script type="application/ld+json">{JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Wespenjager.nl - Koster Bestrijdingstechniek",
-      "url": "https://wespenjager.nl",
+      "name": "Wespenfixer.nl - Koster Bestrijdingstechniek",
+      "url": "https://wespenfixer.nl",
       "telephone": "+31683392065",
-      "email": "helpmij@wespenjager.nl",
+      "email": "helpmij@wespenfixer.nl",
       "description": "Professionele wespenbestrijding en wespennest verwijderen in Twente, Overijssel en omgeving. Joost van Koster Bestrijdingstechniek helpt particulieren snel en veilig van wespenplaag af.",
-      "logo": "https://wespenjager.nl/images/joost-ladder.jpg",
-      "image": "https://wespenjager.nl/images/joost-pak-portret.jpg",
+      "logo": "https://wespenfixer.nl/images/joost-ladder.jpg",
+      "image": "https://wespenfixer.nl/images/joost-pak-portret.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressRegion": "Overijssel",
         "addressCountry": "NL"
       },
       "areaServed": [
-        "Enschede", "Hengelo", "Almelo", "Deventer", "Zwolle",
-        "Oldenzaal", "Borne", "Rijssen", "Wierden", "Hellendoorn",
-        "Nijverdal", "Twente", "Overijssel"
+        "Hellendoorn", "Nijverdal", "Haarle", "Daarle", "Hulsen",
+        "Rijssen", "Holten", "Zuna", "Wierden", "Notter",
+        "Ommen", "Raalte", "Enschede", "Hengelo", "Almelo",
+        "Deventer", "Zwolle", "Oldenzaal", "Borne", "Delden",
+        "Twente", "Overijssel", "Salland", "Vechtdal"
       ],
       "serviceType": "Wespenbestrijding",
       "openingHoursSpecification": {
@@ -269,7 +271,7 @@ const canonicalURL = canonical || Astro.url.href;
       <div class="nav-inner container">
         <a href="/" class="nav-logo">
           <span class="nav-logo-icon">🐝</span>
-          <span class="nav-logo-text">Wespenjager<span>.nl</span></span>
+          <span class="nav-logo-text">Wespenfixer<span>.nl</span></span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-label="Menu openen">☰</button>
         <ul class="nav-links" id="navLinks">
@@ -298,7 +300,7 @@ const canonicalURL = canonical || Astro.url.href;
         <div class="footer-grid">
           <div class="footer-col">
             <div class="footer-logo">
-              <span class="text-yellow">Wespenjager.nl</span>
+              <span class="text-yellow">Wespenfixer.nl</span>
             </div>
             <p>Onderdeel van<br><strong>Koster Bestrijdingstechniek</strong></p>
             <p class="footer-tagline">Snel. Veilig. Vakkundig.</p>
@@ -315,23 +317,26 @@ const canonicalURL = canonical || Astro.url.href;
           <div class="footer-col">
             <h4>Regio's</h4>
             <ul>
+              <li><a href="/wespennest-verwijderen-hellendoorn">Hellendoorn</a></li>
+              <li><a href="/wespennest-verwijderen-nijverdal">Nijverdal</a></li>
+              <li><a href="/wespennest-verwijderen-rijssen">Rijssen</a></li>
+              <li><a href="/wespennest-verwijderen-holten">Holten</a></li>
+              <li><a href="/wespennest-verwijderen-wierden">Wierden</a></li>
+              <li><a href="/wespennest-verwijderen-ommen">Ommen</a></li>
+              <li><a href="/wespennest-verwijderen-raalte">Raalte</a></li>
               <li><a href="/wespennest-verwijderen-enschede">Enschede</a></li>
-              <li><a href="/wespennest-verwijderen-hengelo">Hengelo</a></li>
-              <li><a href="/wespennest-verwijderen-almelo">Almelo</a></li>
-              <li><a href="/wespennest-verwijderen-deventer">Deventer</a></li>
-              <li><a href="/wespennest-verwijderen-zwolle">Zwolle</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Contact</h4>
             <p><a href="tel:+31683392065">📞 06 83392065</a></p>
-            <p><a href="mailto:helpmij@wespenjager.nl">✉ helpmij@wespenjager.nl</a></p>
+            <p><a href="mailto:helpmij@wespenfixer.nl">✉ helpmij@wespenfixer.nl</a></p>
             <p>Werkgebied: Twente & Overijssel</p>
             <p>Ma-Za: 07:00 – 20:00</p>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2025 Wespenjager.nl — Koster Bestrijdingstechniek | <a href="/privacybeleid">Privacybeleid</a></p>
+          <p>© 2025 Wespenfixer.nl — Koster Bestrijdingstechniek | <a href="/privacybeleid">Privacybeleid</a></p>
         </div>
       </div>
     </footer>
