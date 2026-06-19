@@ -92,11 +92,11 @@ const faqSchema = {
       </div>
     </div>
 
-    <!-- Wasp nest image - right side of hero -->
-    <div class="hero-nest-wrap" aria-hidden="true">
+    <!-- Joost photo - right side of hero -->
+    <div class="hero-nest-wrap" aria-hidden="false">
       <img
-        src="/images/wespennest-hero.png"
-        alt="Wespennest"
+        src="/images/joost-ladder.jpg"
+        alt="Joost Koster — erkend wespenbestrijder"
         class="hero-nest-img"
       />
     </div>
@@ -389,25 +389,25 @@ const faqSchema = {
     display: inline-block;
   }
 
-  /* NEST IMAGE - right side of hero */
+  /* JOOST PHOTO - right side of hero */
   .hero-nest-wrap {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     z-index: 2;
   }
   .hero-nest-img {
     width: 100%;
-    max-width: 560px;
-    height: auto;
-    /* Remove white/light background with mix-blend-mode */
-    mix-blend-mode: screen;
-    filter: brightness(1.05) contrast(1.1);
-    border-radius: 12px;
-    /* Fade edges so it blends naturally into dark background */
-    -webkit-mask-image: radial-gradient(ellipse 88% 85% at 55% 50%, black 55%, transparent 100%);
-    mask-image: radial-gradient(ellipse 88% 85% at 55% 50%, black 55%, transparent 100%);
+    max-width: 480px;
+    height: 520px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -8px 60px rgba(0,0,0,0.5);
+    /* Fade bottom edge so it flows into the page */
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   }
 
   @media (max-width: 860px) {
