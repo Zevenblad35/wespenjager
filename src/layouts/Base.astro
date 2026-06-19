@@ -426,14 +426,16 @@ const canonicalURL = canonical || Astro.url.href;
   }
   .nav-links a:hover { background: rgba(255,255,255,0.08); }
   .nav-links .nav-cta {
-    background: var(--yellow);
-    color: var(--black);
+    background: #25D366;
+    color: var(--white);
     font-family: var(--font-display);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
   }
-  .nav-links .nav-cta:hover { background: var(--yellow-dark); }
+  .nav-links .nav-cta:hover { background: #1ebe5d; }
 
   .nav-toggle {
     display: none;

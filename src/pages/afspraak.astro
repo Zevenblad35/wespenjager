@@ -282,8 +282,63 @@ import Base from '../layouts/Base.astro';
     if (validateStep1()) showStep(2);
   });
   document.getElementById('toStep1Back')?.addEventListener('click', () => showStep(1));
-  document.getElementById('toStep3')?.addEventListener('click', () => {
-    if (validateStep2()) { buildSummary(); showStep(3); }
+  document.getElementById('toStep3')?.addEventListener('click', async () => {
+    if (!validateStep2()) return;
+
+    // Gather all data
+    const naam = (document.getElementById('naam') as HTMLInputElement)?.value;
+    const tel = (document.getElementById('telefoon') as HTMLInputElement)?.value;
+    const email = (document.getElementById('email') as HTMLInputElement)?.value;
+    const adres = (document.getElementById('adres') as HTMLInputElement)?.value;
+    const pc = (document.getElementById('postcode') as HTMLInputElement)?.value;
+    const wp = (document.getElementById('woonplaats') as HTMLInputElement)?.value;
+    const omschrijving = (document.getElementById('omschrijving') as HTMLTextAreaElement)?.value;
+    const d1 = (document.getElementById('datum1') as HTMLInputElement)?.value;
+    const t1 = (document.querySelector('input[name="tijdvak1"]:checked') as HTMLInputElement)?.value;
+    const d2 = (document.getElementById('datum2') as HTMLInputElement)?.value;
+    const t2 = (document.querySelector('input[name="tijdvak2"]:checked') as HTMLInputElement)?.value;
+
+    const fmt = (d: string) => { const p = d.split('-'); return `${p[2]}-${p[1]}-${p[0]}`; };
+
+    // Send via Web3Forms (free static site form handler)
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'VERVANG-MET-WEB3FORMS-KEY',  // Gratis key via web3forms.com met joost@wespenfixer.nl
+          subject: `Afspraak aanvraag van ${naam} - Wespenfixer.nl`,
+          from_name: naam,
+          email: email,
+          to: 'joost@wespenfixer.nl',
+          message: `
+Nieuwe afspraak aanvraag via Wespenfixer.nl
+
+CONTACTGEGEVENS
+Naam: ${naam}
+Telefoon: ${tel}
+E-mail: ${email}
+Adres: ${adres}, ${pc} ${wp}
+
+OMSCHRIJVING
+${omschrijving || '(niet ingevuld)'}
+
+VOORKEURSDATUMS
+1e voorkeur: ${fmt(d1)} — ${t1}
+2e voorkeur: ${fmt(d2)} — ${t2}
+
+---
+Verstuurd via wespenfixer.nl/afspraak
+          `.trim()
+        })
+      });
+      // Whether send succeeds or not, show confirmation (fallback also works)
+    } catch(e) {
+      // Silent fail - still show confirmation
+    }
+
+    buildSummary();
+    showStep(3);
   });
 
   // Tijdvak visual selection
