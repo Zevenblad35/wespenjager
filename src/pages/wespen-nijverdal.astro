@@ -1,0 +1,399 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Wespenfixer.nl – Koster Bestrijdingstechniek",
+      "url": "https://wespenfixer.nl",
+      "telephone": "+31683392065",
+      "email": "joost@wespenfixer.nl",
+      "image": "https://wespenfixer.nl/images/joost-pak-portret.jpg",
+      "description": "Professionele wespenbestrijding in Nijverdal en omgeving. Wespennest verwijderen door erkend bestrijdingstechnicus Joost van Koster Bestrijdingstechniek. Dezelfde dag service.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nijverdal",
+        "addressRegion": "Overijssel",
+        "addressCountry": "NL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.3606",
+        "longitude": "6.4606"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Nijverdal" },
+        { "@type": "City", "name": "Hellendoorn" },
+        { "@type": "Place", "name": "Haarle" },
+        { "@type": "Place", "name": "Daarle" },
+        { "@type": "Place", "name": "Hulsen" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      },
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie verwijdert wespen in Nijverdal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Joost van Wespenfixer.nl (Koster Bestrijdingstechniek) is de erkende wespenbestrijder in Nijverdal en omgeving. Hij verwijdert wespennesten snel en veilig, ook in Hellendoorn, Haarle, Daarle en Hulsen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe snel kan een wespennest verwijderd worden in Nijverdal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Joost biedt dezelfde dag service in Nijverdal. Belt u 's ochtends, dan is hij er vaak nog die middag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat kost wespenbestrijding in Nijverdal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De prijs hangt af van de locatie en grootte van het nest. Joost geeft een eerlijke prijsopgave voor de behandeling. Neem contact op via WhatsApp of bel 06 83392065."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welk gebied bedient de wespenbestrijder in Nijverdal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Joost is actief in Nijverdal, Hellendoorn, Haarle, Daarle, Hulsen en alle omliggende buurtschappen. Ook actief in de bredere regio Twente en Overijssel."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title="Wespen Nijverdal | Wespennest verwijderen | Wespenfixer.nl"
+  description="Last van wespen in Nijverdal? Joost van Wespenfixer.nl verwijdert uw wespennest snel en veilig. Erkend bestrijdingstechnicus, actief in Nijverdal, Hellendoorn, Haarle en omgeving. Dezelfde dag mogelijk."
+  schema={schema}
+  canonical="https://wespenfixer.nl/wespen-nijverdal"
+  ogImage="/images/joost-behandeling.jpg"
+>
+
+<!-- HERO -->
+<section class="page-hero-local">
+  <div class="hero-local-bg">
+    <img src="/images/joost-buiten.jpg" alt="Joost wespenbestrijder Nijverdal" />
+    <div class="hero-local-overlay"></div>
+  </div>
+  <div class="container hero-local-content">
+    <nav class="breadcrumb">
+      <a href="/">Home</a> › <a href="/wespennest-verwijderen-nijverdal">Nijverdal</a> › Wespen Nijverdal
+    </nav>
+    <span class="eyebrow text-yellow">Wespenbestrijder in Nijverdal</span>
+    <h1>Wespen <span class="text-yellow">Nijverdal</span></h1>
+    <p class="lead" style="color:rgba(255,255,255,0.85); max-width:600px;">
+      Last van een wespennest in Nijverdal? Joost van Wespenfixer.nl is uw lokale erkende wespenbestrijder — snel ter plaatse, ook in Hellendoorn, Haarle, Daarle en Hulsen.
+    </p>
+    <div class="hero-local-ctas">
+      <a href="https://wa.me/31683392065" target="_blank" rel="noopener" class="btn btn-wa btn-hero">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Joost
+      </a>
+      <a href="/afspraak" class="btn btn-outline">📅 Afspraak inplannen</a>
+    </div>
+    <p style="color:rgba(255,255,255,0.45); font-size:0.82rem; margin-top:10px;">Of bel: <a href="tel:+31683392065" style="color:rgba(255,255,255,0.6);">06 83392065</a></p>
+  </div>
+</section>
+<div class="wasp-stripe"></div>
+
+<!-- MAIN CONTENT - keyword-rich, AI-friendly structured prose -->
+<section class="section">
+  <div class="container">
+    <div class="loc-content-split">
+      <article class="loc-article">
+
+        <!-- AI-friendly direct answer block -->
+        <div class="answer-block">
+          <h2>De wespenbestrijder in Nijverdal: Joost van Wespenfixer.nl</h2>
+          <p>Voor wespenbestrijding in Nijverdal kunt u terecht bij <strong>Joost van Wespenfixer.nl</strong>, onderdeel van Koster Bestrijdingstechniek. Joost is een erkend bestrijdingstechnicus die actief is in Nijverdal en de directe omgeving: Hellendoorn, Haarle, Daarle, Hulsen en alle omliggende buurtschappen.</p>
+          <p>Joost verwijdert wespennesten snel, veilig en professioneel. Hij werkt met gecertificeerde bestrijdingsmiddelen en volledige beschermende uitrusting. Dezelfde dag service is in de meeste gevallen mogelijk.</p>
+        </div>
+
+        <h2>Wespenoverlast in Nijverdal</h2>
+        <p>Nijverdal en de omringende buurtschappen zoals Haarle, Daarle en Hulsen kennen in de zomer regelmatig wespenoverlast. Woningen in de omgeving van het Hellendoornse landschap — met veel groen, oudere bebouwing en agrarische percelen — bieden ideale nestgelegenheid voor wespen.</p>
+        <p>Veel nesten in Nijverdal zitten in dakgoten, spouwmuren van jaren-60 woningen, schuren en tuinhuisjes. In de omliggende buurtschappen worden ook regelmatig grondbewonende wespen aangetroffen.</p>
+
+        <h2>Wespen verwijderen in Nijverdal: hoe werkt het?</h2>
+        <ol class="numbered-list">
+          <li><strong>Contact via WhatsApp of telefoon</strong> — App of bel Joost op 06 83392065. Hij is bereikbaar ma–za van 09:00 tot 20:00.</li>
+          <li><strong>Inspectie in Nijverdal</strong> — Joost komt ter plaatse, beoordeelt het nest en de nestlocatie, en legt uit wat de meest effectieve behandeling is.</li>
+          <li><strong>Professionele behandeling</strong> — Met gecertificeerde middelen en volledige beschermende uitrusting worden de wespen bestreden. Veilig voor uw gezin en huisdieren.</li>
+          <li><strong>Nazorg en advies</strong> — Joost geeft advies om herhaling te voorkomen en vertelt wanneer de behandelingszone weer veilig te betreden is.</li>
+        </ol>
+
+        <h2>Wespen in Nijverdal — veelgestelde vragen</h2>
+        <details class="faq-local">
+          <summary>Wie is de wespenbestrijder in Nijverdal?</summary>
+          <p>Joost van Wespenfixer.nl (Koster Bestrijdingstechniek) is de erkende wespenbestrijder voor Nijverdal en omgeving. Hij is bereikbaar via WhatsApp op 06 83392065.</p>
+        </details>
+        <details class="faq-local">
+          <summary>Hoe snel wordt een wespennest verwijderd in Nijverdal?</summary>
+          <p>Joost biedt dezelfde dag service in Nijverdal. Belt of appt u 's ochtends, dan is hij er vaak nog die middag.</p>
+        </details>
+        <details class="faq-local">
+          <summary>Wat kost wespenbestrijding in Nijverdal?</summary>
+          <p>De prijs hangt af van de locatie van het nest en de bereikbaarheid. Joost geeft altijd een eerlijke prijsopgave voordat hij begint. Neem contact op voor een vrijblijvende schatting.</p>
+        </details>
+        <details class="faq-local">
+          <summary>Werkt Joost ook in Haarle, Daarle en Hulsen?</summary>
+          <p>Ja. Naast Nijverdal is Joost actief in alle omliggende buurtschappen: Haarle, Daarle, Hulsen, en verder in de gemeente Hellendoorn en heel Twente.</p>
+        </details>
+        <details class="faq-local">
+          <summary>Is wespenbestrijding veilig voor kinderen en huisdieren?</summary>
+          <p>Joost werkt met gecertificeerde middelen die na de behandeling veilig zijn voor mensen en huisdieren. Hij adviseert ter plekke over de aanbevolen wachttijd.</p>
+        </details>
+
+        <h2>Werkgebied rondom Nijverdal</h2>
+        <p>Joost is actief in Nijverdal zelf én in alle omliggende gebieden:</p>
+        <div class="area-grid">
+          {[
+            ['Hellendoorn', '/wespennest-verwijderen-hellendoorn'],
+            ['Haarle', '/wespennest-verwijderen-haarle'],
+            ['Daarle', '/wespennest-verwijderen-daarle'],
+            ['Hulsen', '/wespennest-verwijderen-hulsen'],
+            ['Rijssen', '/wespennest-verwijderen-rijssen'],
+            ['Holten', '/wespennest-verwijderen-holten'],
+            ['Wierden', '/wespennest-verwijderen-wierden'],
+            ['Raalte', '/wespennest-verwijderen-raalte'],
+            ['Ommen', '/wespennest-verwijderen-ommen'],
+          ].map(([city, url]) => (
+            <a href={url} class="area-chip">📍 {city}</a>
+          ))}
+        </div>
+
+      </article>
+
+      <!-- Aside -->
+      <aside class="loc-aside-sticky">
+        <div class="aside-hero-card">
+          <img src="/images/joost-pak-portret.jpg" alt="Joost — wespenbestrijder Nijverdal" />
+          <div class="aside-hero-body">
+            <p class="aside-name">Joost</p>
+            <p class="aside-sub">Wespenbestrijder Nijverdal</p>
+            <a href="https://wa.me/31683392065" target="_blank" rel="noopener" class="btn btn-wa" style="width:100%;justify-content:center;margin-bottom:8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp: 06 83392065
+            </a>
+            <a href="tel:+31683392065" class="aside-tel-link">Of bel: 06 83392065</a>
+            <a href="/afspraak" class="btn btn-blue" style="width:100%;justify-content:center;margin-top:8px;">📅 Afspraak inplannen</a>
+          </div>
+        </div>
+
+        <div class="aside-facts-box">
+          <h4>Wespenbestrijder Nijverdal</h4>
+          <ul>
+            <li>✅ Erkend bestrijdingstechnicus</li>
+            <li>⚡ Dezelfde dag service</li>
+            <li>📍 Nijverdal & omgeving</li>
+            <li>🛡️ Gecertificeerde middelen</li>
+            <li>📅 Ma–Za 09:00–20:00</li>
+          </ul>
+        </div>
+
+        <div class="aside-rating">
+          <div class="stars" style="font-size:1.3rem;">★★★★★</div>
+          <strong>4.9 / 5</strong>
+          <p>gebaseerd op klantbeoordelingen in Twente</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm section-yellow text-center">
+  <div class="container">
+    <h2>Wespen in Nijverdal? Joost lost het op.</h2>
+    <p style="font-size:1.1rem; margin: 12px 0 24px;">Dezelfde dag service. Veilig. Gecertificeerd.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="https://wa.me/31683392065" target="_blank" rel="noopener" class="btn btn-wa" style="font-size:1.05rem; padding:16px 32px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Joost
+      </a>
+      <a href="/afspraak" class="btn btn-outline-dark-yellow" style="font-size:1.05rem; padding:16px 32px; background:transparent; border:2px solid var(--black); color:var(--black); font-family:var(--font-display); font-weight:900; text-transform:uppercase; border-radius:var(--radius); text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+        📅 Afspraak inplannen
+      </a>
+    </div>
+  </div>
+</section>
+
+</Base>
+
+<style>
+  .breadcrumb { font-size:0.82rem; color:rgba(255,255,255,0.45); margin-bottom:20px; }
+  .breadcrumb a { color:rgba(255,255,255,0.55); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--yellow); }
+
+  /* HERO */
+  .page-hero-local {
+    position: relative;
+    min-height: 70vh;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+  }
+  .hero-local-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .hero-local-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+  }
+  .hero-local-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(0,0,0,0.88) 45%, rgba(26,111,191,0.25) 100%);
+  }
+  .hero-local-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 24px;
+    color: var(--white);
+  }
+  .hero-local-content h1 { margin: 12px 0 16px; font-size: clamp(2.4rem, 5vw, 4rem); }
+  .hero-local-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+
+  /* CONTENT SPLIT */
+  .loc-content-split {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 56px;
+    align-items: start;
+  }
+
+  /* ANSWER BLOCK - styled for AI parsability */
+  .answer-block {
+    background: var(--yellow-light);
+    border-left: 4px solid var(--yellow);
+    padding: 20px 24px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+  }
+  .answer-block h2 { font-size: 1.2rem; margin-bottom: 12px; }
+  .answer-block p { color: #333; margin-bottom: 8px; font-size: 0.97rem; }
+
+  .loc-article h2 { font-size: 1.4rem; margin: 36px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--yellow); display: inline-block; }
+  .loc-article p { color: #444; margin-bottom: 14px; }
+
+  .numbered-list { margin: 16px 0 16px 4px; list-style: none; counter-reset: steps; }
+  .numbered-list li {
+    counter-increment: steps;
+    padding: 12px 0 12px 48px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  .numbered-list li::before {
+    content: counter(steps);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    background: var(--yellow);
+    color: var(--black);
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 0.85rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* FAQ */
+  .faq-local {
+    border-bottom: 1px solid #eee;
+    padding: 14px 0;
+  }
+  .faq-local summary {
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.97rem;
+    color: var(--black);
+  }
+  .faq-local summary::after { content: ' +'; color: var(--yellow-dark); }
+  .faq-local[open] summary::after { content: ' −'; }
+  .faq-local p { margin-top: 10px; color: #555; font-size: 0.92rem; }
+
+  /* AREA GRID */
+  .area-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .area-chip {
+    background: var(--grey);
+    border: 1px solid #ddd;
+    color: var(--blue);
+    font-size: 0.85rem;
+    padding: 7px 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .area-chip:hover { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+
+  /* ASIDE */
+  .loc-aside-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 20px; }
+  .aside-hero-card {
+    background: var(--black);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .aside-hero-card img { width: 100%; height: 180px; object-fit: cover; object-position: top; }
+  .aside-hero-body { padding: 20px; }
+  .aside-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 900; color: var(--white); margin-bottom: 2px; }
+  .aside-sub { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+  .aside-tel-link { display: block; text-align: center; color: rgba(255,255,255,0.45); font-size: 0.8rem; margin-top: 6px; text-decoration: none; }
+  .aside-tel-link:hover { color: var(--yellow); }
+
+  .aside-facts-box {
+    background: var(--grey);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+  }
+  .aside-facts-box h4 { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-mid); margin-bottom: 12px; }
+  .aside-facts-box ul { list-style: none; }
+  .aside-facts-box li { padding: 8px 0; border-bottom: 1px solid #e5e5e5; font-size: 0.9rem; }
+
+  .aside-rating {
+    background: var(--white);
+    border: 2px solid var(--yellow);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .aside-rating strong { display: block; font-size: 1.2rem; margin: 4px 0; }
+  .aside-rating p { font-size: 0.8rem; color: #888; margin: 0; }
+
+  @media (max-width: 800px) {
+    .loc-content-split { grid-template-columns: 1fr; }
+    .loc-aside-sticky { position: static; }
+  }
+</style>
