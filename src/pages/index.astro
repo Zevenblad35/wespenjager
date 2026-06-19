@@ -58,7 +58,7 @@ const faqSchema = {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="/images/joost-behandeling.jpg" alt="Joost behandelt wespennest in professioneel pak" class="hero-img" />
+    <img src="/images/wespennest-hero.png" alt="Wespennest" class="hero-img" />
     <div class="hero-overlay"></div>
   </div>
 
@@ -90,15 +90,6 @@ const faqSchema = {
         <div class="trust-sep">·</div>
         <div class="trust-item"><span class="trust-dot"></span> Gecertificeerd</div>
       </div>
-    </div>
-
-    <!-- Joost photo - right side of hero -->
-    <div class="hero-nest-wrap" aria-hidden="false">
-      <img
-        src="/images/joost-ladder.jpg"
-        alt="Joost Koster — erkend wespenbestrijder"
-        class="hero-nest-img"
-      />
     </div>
   </div>
   <div class="wasp-stripe"></div>
@@ -314,37 +305,32 @@ const faqSchema = {
     background: var(--black);
     overflow: hidden;
   }
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-  }
+  .hero-bg { position: absolute; inset: 0; }
   .hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
-    opacity: 0.35;
+    object-position: center center;
+    opacity: 0.45;
   }
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(110deg, rgba(0,0,0,0.92) 40%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(135deg, rgba(0,0,0,0.82) 40%, rgba(13,13,13,0.65) 100%);
   }
   .hero-content {
     position: relative;
     z-index: 2;
     flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
-    gap: 32px;
     padding: 80px 24px;
   }
-  .hero-text { max-width: 580px; }
+  .hero-text { max-width: 640px; }
   .hero-title {
     margin: 16px 0;
     line-height: 1.0;
-    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-size: clamp(2.8rem, 6vw, 5rem);
     color: var(--white);
   }
   .hero-ctas {
@@ -387,32 +373,6 @@ const faqSchema = {
     background: rgba(255,255,255,0.7);
     flex-shrink: 0;
     display: inline-block;
-  }
-
-  /* JOOST PHOTO - right side of hero */
-  .hero-nest-wrap {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    z-index: 2;
-  }
-  .hero-nest-img {
-    width: 100%;
-    max-width: 480px;
-    height: 520px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 12px 12px 0 0;
-    box-shadow: 0 -8px 60px rgba(0,0,0,0.5);
-    /* Fade bottom edge so it flows into the page */
-    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-  }
-
-  @media (max-width: 860px) {
-    .hero-content { grid-template-columns: 1fr; }
-    .hero-nest-wrap { display: none; }
   }
 
   /* URGENCY */
